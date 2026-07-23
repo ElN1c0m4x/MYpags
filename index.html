@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nik Web Designer — Landing pages, apps y soluciones web a medida</title>
+  <meta name="description" content="Diseño y desarrollo landing pages, aplicaciones web y proyectos completos a medida. Modernos, rápidos y pensados para vender." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0f172a',
+            brand: '#2563eb',
+            brandDark: '#1d4ed8',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.in { opacity: 1; transform: none; }
+    /* Preview estático de la captura del sitio */
+    .preview { position: relative; overflow: hidden; }
+    .preview .shot {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand/20">
+
+  <!-- ===== NAV ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 border-b border-slate-100">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2 font-extrabold text-ink text-lg">
+        <span class="grid place-items-center w-8 h-8 rounded-lg bg-brand text-white text-sm">N</span>
+        Nik <span class="text-brand">Web Designer</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#portafolio" class="hover:text-brand transition">Portafolio</a>
+        <a href="#proceso" class="hover:text-brand transition">Proceso</a>
+        <a href="#precios" class="hover:text-brand transition">Precios</a>
+        <a href="#contacto" class="hover:text-brand transition">Contacto</a>
+      </div>
+      <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm font-semibold px-5 py-2.5 hover:bg-brand transition">
+        Pedir presupuesto
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO / INTRO ===== -->
+  <section id="inicio" class="relative pt-28 pb-16 md:pt-32 md:pb-20 bg-ink text-white overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+    <div class="relative max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Mockup: foto real de dispositivos (responsive / personalizable) -->
+      <div class="order-2 lg:order-1">
+        <div class="relative mx-auto max-w-lg">
+          <!-- Reemplazable: guarda "devices.png" junto al index.html para usar tu propia imagen -->
+          <img src="devices.png"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1100&q=80'"
+               alt="Notebook, tablet y celular mostrando una web responsive"
+               class="w-full rounded-2xl shadow-2xl border border-white/10" />
+          <!-- etiquetas flotantes -->
+          <div class="absolute -top-3 left-4 bg-white text-ink text-xs font-bold px-4 py-2 rounded-full shadow-lg">💻 Notebook · Tablet · Celular</div>
+          <div class="absolute -bottom-3 -right-2 bg-brand text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">100% personalizable</div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="order-1 lg:order-2">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold text-slate-200 mb-5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Diseño a tu medida
+        </span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
+          Webs y apps<br><span class="text-brand">hechas a tu manera</span>
+        </h1>
+        <p class="mt-5 text-lg text-slate-300 max-w-lg">
+          Todo se adapta a vos: colores, estilo, textos y funciones. Diseño landing pages,
+          aplicaciones web y soluciones completas pensadas para tu marca y tus objetivos.
+        </p>
+        <p class="mt-6 font-semibold text-white">Incluye:</p>
+        <ul class="mt-3 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-200 text-sm max-w-lg">
+          <li class="flex gap-2"><span class="text-brand">✓</span> Landing pages</li>
+          <li class="flex gap-2"><span class="text-brand">✓</span> Aplicaciones web</li>
+          <li class="flex gap-2"><span class="text-brand">✓</span> Páginas + apps</li>
+          <li class="flex gap-2"><span class="text-brand">✓</span> Formularios de contacto</li>
+          <li class="flex gap-2"><span class="text-brand">✓</span> Botón de WhatsApp</li>
+          <li class="flex gap-2"><span class="text-brand">✓</span> Diseño 100% responsive</li>
+        </ul>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#contacto" class="inline-flex justify-center items-center rounded-full bg-brand text-white font-semibold px-7 py-3.5 hover:bg-brandDark transition shadow-lg shadow-brand/25">Quiero más info</a>
+          <a href="#portafolio" class="inline-flex justify-center items-center rounded-full border border-white/25 text-white font-semibold px-7 py-3.5 hover:bg-white/10 transition">Ver trabajos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="pt-12 pb-8 border-b border-slate-100 bg-slate-50/60">
+    <div class="max-w-6xl mx-auto px-5 grid sm:grid-cols-3 gap-6">
+      <div class="fade-up flex items-start gap-3">
+        <span class="text-2xl">⚡</span>
+        <div><h3 class="font-bold text-ink">Landing Pages</h3><p class="text-sm text-slate-600 mt-1">Páginas de venta optimizadas para captar clientes y conversiones.</p></div>
+      </div>
+      <div class="fade-up flex items-start gap-3">
+        <span class="text-2xl">🧩</span>
+        <div><h3 class="font-bold text-ink">Aplicaciones Web</h3><p class="text-sm text-slate-600 mt-1">Herramientas y plataformas a medida, con paneles y funciones reales.</p></div>
+      </div>
+      <div class="fade-up flex items-start gap-3">
+        <span class="text-2xl">🚀</span>
+        <div><h3 class="font-bold text-ink">Páginas + Apps</h3><p class="text-sm text-slate-600 mt-1">Soluciones completas que unen presencia y funcionalidad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTAFOLIO ===== -->
+  <section id="portafolio" class="py-14">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl mb-10">
+        <p class="text-brand font-semibold text-sm uppercase tracking-wider">Portafolio</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mt-2">Trabajos realizados</h2>
+        <p class="text-slate-600 mt-3">Una selección de proyectos organizados por categoría. Reemplaza estos ejemplos por tus propios trabajos.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-2 mb-8" id="filtros">
+        <button data-filter="all" class="filtro is-active rounded-full px-4 py-2 text-sm font-semibold border border-slate-200 transition">Todos</button>
+        <button data-filter="web" class="filtro rounded-full px-4 py-2 text-sm font-semibold border border-slate-200 transition">Diseño Web</button>
+        <button data-filter="redes" class="filtro rounded-full px-4 py-2 text-sm font-semibold border border-slate-200 transition">Redes Sociales</button>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6" id="grid">
+        <!-- card -->
+        <article data-cat="web" class="proyecto preview fade-up group relative h-72">
+          <!-- Guarda tu captura como "pixeles.png" junto a este index.html. Si no existe, usa la captura automática del sitio. -->
+          <img class="shot" src="pixeles.png" onerror="this.onerror=null;this.src='https://image.thum.io/get/width/1000/crop/750/wait/6/https://pixelescreativos.com.ar/'" alt="Vista del sitio Pixeles Creativos" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-3xl font-bold drop-shadow">Pixeles Creativos Gráfica</h3>
+            <p class="mt-2 text-sm tracking-wide text-slate-100 drop-shadow">Landing Page</p>
+            <a href="https://pixelescreativos.com.ar/" target="_blank" rel="noopener" class="mt-4 inline-block border border-white/80 text-xs font-bold tracking-widest uppercase px-6 py-3 bg-black/30 hover:bg-white hover:text-ink transition">Visitar Sitio</a>
+          </div>
+        </article>
+        <article data-cat="web" class="proyecto preview fade-up group relative h-72">
+          <img class="shot" src="menu.png" onerror="this.onerror=null;this.src='https://image.thum.io/get/width/1000/crop/750/wait/5/https://eln1c0m4x.github.io/menurestaurant/'" alt="Vista del sitio Menú Restaurante" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-3xl font-bold drop-shadow">Menú Restaurante</h3>
+            <p class="mt-2 text-sm tracking-wide text-slate-100 drop-shadow">Desarrollo Web</p>
+            <a href="https://eln1c0m4x.github.io/menurestaurant/" target="_blank" rel="noopener" class="mt-4 inline-block border border-white/80 text-xs font-bold tracking-widest uppercase px-6 py-3 bg-black/30 hover:bg-white hover:text-ink transition">Visitar Sitio</a>
+          </div>
+        </article>
+        <article data-cat="web" class="proyecto preview fade-up group relative h-72">
+          <img class="shot" src="gym.png" onerror="this.onerror=null;this.src='https://image.thum.io/get/width/1000/crop/750/wait/5/https://eln1c0m4x.github.io/gymnasio/'" alt="Vista del sitio Gimnasio" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/25 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-3xl font-bold drop-shadow">Gimnasio</h3>
+            <p class="mt-2 text-sm tracking-wide text-slate-100 drop-shadow">Landing Page</p>
+            <a href="https://eln1c0m4x.github.io/gymnasio/" target="_blank" rel="noopener" class="mt-4 inline-block border border-white/80 text-xs font-bold tracking-widest uppercase px-6 py-3 bg-black/30 hover:bg-white hover:text-ink transition">Visitar Sitio</a>
+          </div>
+        </article>
+        <article data-cat="redes" class="proyecto fade-up group relative h-72 overflow-hidden bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80')">
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-3xl font-bold">Proyecto Cuatro</h3>
+            <p class="mt-2 text-sm tracking-wide text-slate-200">Página + App</p>
+            <a href="#" target="_blank" class="mt-4 inline-block border border-white/80 text-xs font-bold tracking-widest uppercase px-6 py-3 hover:bg-white hover:text-ink transition">Visitar Sitio</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section id="proceso" class="py-14 bg-slate-50/70 border-y border-slate-100">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl mb-12">
+        <p class="text-brand font-semibold text-sm uppercase tracking-wider">Cómo trabajamos</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mt-2">Un proceso claro y transparente</h2>
+        <p class="text-slate-600 mt-3">Sabrás en todo momento en qué etapa está tu proyecto, sin sorpresas.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="fade-up bg-white rounded-2xl p-6 border border-slate-200">
+          <span class="grid place-items-center w-11 h-11 rounded-xl bg-brand/10 text-brand font-extrabold">01</span>
+          <h3 class="font-bold text-ink mt-4">Contacto y descubrimiento</h3>
+          <p class="text-sm text-slate-600 mt-2">Me cuentas tu idea, objetivos y referencias. Definimos alcance y presupuesto.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-slate-200">
+          <span class="grid place-items-center w-11 h-11 rounded-xl bg-brand/10 text-brand font-extrabold">02</span>
+          <h3 class="font-bold text-ink mt-4">Diseño y propuesta</h3>
+          <p class="text-sm text-slate-600 mt-2">Creo la estructura y el diseño visual. Lo revisamos y ajustamos juntos.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-slate-200">
+          <span class="grid place-items-center w-11 h-11 rounded-xl bg-brand/10 text-brand font-extrabold">03</span>
+          <h3 class="font-bold text-ink mt-4">Desarrollo</h3>
+          <p class="text-sm text-slate-600 mt-2">Programo tu web o app con código limpio, rápido y responsive.</p>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-6 border border-slate-200">
+          <span class="grid place-items-center w-11 h-11 rounded-xl bg-brand/10 text-brand font-extrabold">04</span>
+          <h3 class="font-bold text-ink mt-4">Entrega y soporte</h3>
+          <p class="text-sm text-slate-600 mt-2">Publicamos el proyecto, te capacito para usarlo y ofrezco soporte posterior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRECIOS ===== -->
+  <section id="precios" class="py-14">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-2xl mb-12">
+        <p class="text-brand font-semibold text-sm uppercase tracking-wider">Precios orientativos</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ink mt-2">Planes y modelos de contratación</h2>
+        <p class="text-slate-600 mt-3">Rangos de referencia. El precio final depende del alcance real de tu proyecto.</p>
+      </div>
+      <!-- ===== BLOQUE DE PRECIO (duplicar este bloque para agregar más planes) ===== -->
+      <div class="plan fade-up grid lg:grid-cols-2 gap-0 items-stretch rounded-3xl overflow-hidden shadow-xl shadow-slate-200/70 border border-slate-100">
+        <!-- Columna izquierda: descripción -->
+        <div class="p-8 md:p-12 bg-white">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">Presencia online directa</span>
+          <h3 class="mt-4 text-4xl font-extrabold text-ink leading-tight">Landing <span class="text-brand">Page</span></h3>
+          <p class="text-slate-600 mt-4">Una página única, rápida y orientada a un solo objetivo: convertir visitas en clientes. Ideal para lanzar un producto, campaña o negocio nuevo.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-700">
+            <li class="flex gap-3"><span class="grid place-items-center shrink-0 w-5 h-5 rounded-full bg-brand/10 text-brand text-xs mt-0.5">✓</span><span><b>Diseño a medida:</b> sin plantillas genéricas, pensado para tu marca.</span></li>
+            <li class="flex gap-3"><span class="grid place-items-center shrink-0 w-5 h-5 rounded-full bg-brand/10 text-brand text-xs mt-0.5">✓</span><span><b>Orientada a conversión:</b> estructura pensada para que el visitante tome acción.</span></li>
+            <li class="flex gap-3"><span class="grid place-items-center shrink-0 w-5 h-5 rounded-full bg-brand/10 text-brand text-xs mt-0.5">✓</span><span><b>Lista para Google Ads:</b> optimizada para arrancar campañas pagas <i>(opcional)</i>.</span></li>
+            <li class="flex gap-3"><span class="grid place-items-center shrink-0 w-5 h-5 rounded-full bg-brand/10 text-brand text-xs mt-0.5">✓</span><span><b>100% responsive:</b> perfecta en celular, tablet y computadora.</span></li>
+            <li class="flex gap-3"><span class="grid place-items-center shrink-0 w-5 h-5 rounded-full bg-brand/10 text-brand text-xs mt-0.5">✓</span><span><b>Entrega rápida:</b> tu web online en pocos días.</span></li>
+          </ul>
+          <a href="https://pixelescreativos.com.ar/" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 rounded-full border border-slate-300 text-ink font-semibold px-7 py-3 hover:border-brand hover:text-brand transition">Ver ejemplo →</a>
+        </div>
+
+        <!-- Columna derecha: tarjeta de precio -->
+        <div class="relative p-8 md:p-12 flex flex-col bg-gradient-to-br from-ink to-slate-800 text-white overflow-hidden">
+          <span class="absolute top-6 right-0 bg-brand text-white text-[11px] font-bold tracking-widest px-10 py-1 rotate-45 translate-x-8">DESDE</span>
+          <div class="text-center">
+            <h4 class="text-2xl font-bold">Tu Landing Page</h4>
+            <p class="text-sm text-slate-300 mt-1">Diseño + desarrollo completo</p>
+          </div>
+          <div class="text-center mt-8">
+            <p class="text-6xl font-extrabold text-white"><span class="text-3xl align-top text-brand">$</span>300.000</p>
+            <p class="text-sm text-slate-300 mt-2">Dominio y Hosting bonificados 1er año</p>
+          </div>
+          <ul class="mt-8 space-y-0 flex-1">
+            <li class="flex items-center gap-3 py-3 border-b border-white/10"><span class="text-brand font-bold">✓</span> Diseño totalmente personalizado</li>
+            <li class="flex items-center gap-3 py-3 border-b border-white/10"><span class="text-brand font-bold">✓</span> Formulario de contacto</li>
+            <li class="flex items-center gap-3 py-3 border-b border-white/10"><span class="text-brand font-bold">✓</span> WhatsApp flotante y redes sociales</li>
+            <li class="flex items-center gap-3 py-3 border-b border-white/10"><span class="text-brand font-bold">✓</span> SEO básico incluido</li>
+            <li class="flex items-center gap-3 py-3"><span class="text-brand font-bold">✓</span> Carga rápida en buscadores</li>
+          </ul>
+          <a href="#contacto" class="mt-8 text-center rounded-full bg-brand text-white font-bold py-3.5 hover:bg-brandDark transition shadow-lg shadow-brand/30">Quiero esta web</a>
+          <p class="text-center text-xs text-slate-400 mt-3">Atención personalizada</p>
+        </div>
+      </div>
+      <!-- ===== FIN BLOQUE DE PRECIO ===== -->
+
+      <p class="text-xs text-slate-400 mt-6">*Precios orientativos. Se define un presupuesto cerrado tras conocer los requisitos.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="py-14 bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-blue-300 font-semibold text-sm uppercase tracking-wider">Contacto</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">¿Listo para empezar tu proyecto?</h2>
+        <p class="text-slate-300 mt-3">Cuéntame qué necesitas y te respondo con una propuesta. Sin compromiso.</p>
+        <div class="mt-8 space-y-3">
+          <a href="https://wa.me/000000000?text=Hola%20Nik,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-4 transition">
+            <span class="text-2xl">💬</span>
+            <div><p class="font-semibold">WhatsApp</p><p class="text-sm text-slate-400">Respuesta rápida — clic para chatear</p></div>
+          </a>
+          <a href="mailto:nicoytata@gmail.com" class="flex items-center gap-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-4 transition">
+            <span class="text-2xl">✉️</span>
+            <div><p class="font-semibold">Email</p><p class="text-sm text-slate-400">nicoytata@gmail.com</p></div>
+          </a>
+          <div class="flex gap-3 pt-2">
+            <a href="#" class="grid place-items-center w-11 h-11 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition" title="Instagram">📷</a>
+            <a href="#" class="grid place-items-center w-11 h-11 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition" title="LinkedIn">in</a>
+            <a href="#" class="grid place-items-center w-11 h-11 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition" title="GitHub">🐙</a>
+          </div>
+        </div>
+      </div>
+
+      <form id="form" class="bg-white text-slate-800 rounded-2xl p-7 space-y-4">
+        <div>
+          <label class="text-sm font-semibold text-ink">Nombre</label>
+          <input required type="text" name="nombre" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" placeholder="Tu nombre" />
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-ink">Email</label>
+          <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" placeholder="tucorreo@ejemplo.com" />
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-ink">Tipo de proyecto</label>
+          <select name="tipo" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand">
+            <option>Landing Page</option>
+            <option>Aplicación Web</option>
+            <option>Página + App</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-ink">Mensaje</label>
+          <textarea required name="mensaje" rows="4" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+        </div>
+        <button type="submit" class="w-full rounded-full bg-brand text-white font-semibold py-3.5 hover:bg-brandDark transition">Enviar mensaje</button>
+        <p id="form-msg" class="text-sm text-center text-emerald-600 hidden">¡Gracias! Se abrió tu correo con el mensaje listo para enviar.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-10 bg-ink border-t border-white/10 text-slate-400 text-sm">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-semibold text-white">Nik <span class="text-brand">Web Designer</span></p>
+      <p>© <span id="year"></span> Nik Web Designer — Landing pages, apps y soluciones a medida.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Año
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filtros de portafolio
+    const botones = document.querySelectorAll('.filtro');
+    const proyectos = document.querySelectorAll('.proyecto');
+    const styleActive = (b) => {
+      botones.forEach(x => { x.classList.remove('bg-ink','text-white','border-ink'); x.classList.add('text-slate-600'); });
+      b.classList.add('bg-ink','text-white','border-ink'); b.classList.remove('text-slate-600');
+    };
+    botones.forEach(b => b.addEventListener('click', () => {
+      styleActive(b);
+      const f = b.dataset.filter;
+      proyectos.forEach(p => {
+        const show = f === 'all' || p.dataset.cat === f;
+        p.style.display = show ? '' : 'none';
+      });
+    }));
+    styleActive(document.querySelector('[data-filter="all"]'));
+
+    // Animación fade-up
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    // Form -> abre email (sin backend). Reemplazable por Formspree/EmailJS.
+    document.getElementById('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = new FormData(e.target);
+      const cuerpo = `Nombre: ${d.get('nombre')}%0AEmail: ${d.get('email')}%0ATipo: ${d.get('tipo')}%0A%0A${d.get('mensaje')}`;
+      window.location.href = `mailto:nicoytata@gmail.com?subject=Nuevo%20proyecto%20-%20${encodeURIComponent(d.get('nombre'))}&body=${cuerpo}`;
+      document.getElementById('form-msg').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
